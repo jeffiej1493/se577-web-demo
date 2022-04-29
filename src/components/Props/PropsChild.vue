@@ -18,7 +18,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'PropsChildComponent',
+  name: 'PropsChild',
   props: { title: String },
 });
 </script>

@@ -13,7 +13,11 @@
         >
           <q-card>
             <q-card-section>
-              <q-input outlined v-model="bindingText" label="Enter some text" />
+              <q-input
+                outlined
+                v-model="bindingText"
+                label="Enter some text here"
+              />
               <h5><strong>Entered Text: </strong> {{ bindingText }}</h5>
             </q-card-section>
           </q-card>
@@ -30,7 +34,7 @@
           <q-card>
             <q-card-section>
               <q-toggle
-                color="teal"
+                color="red"
                 v-model="showMeToggle"
                 label="Click Me"
                 left-label
@@ -42,7 +46,7 @@
               <div>
                 <q-btn
                   @click="buttonPressToggle = !buttonPressToggle"
-                  :color="buttonPressToggle ? 'teal' : 'white'"
+                  :color="buttonPressToggle ? 'red' : 'white'"
                   :text-color="!buttonPressToggle ? 'black' : 'white'"
                   label="Click Me"
                 />
@@ -73,7 +77,7 @@
               />
               <strong>(Checked: </strong> {{ crToggle }} <strong>)</strong>
               <h5 v-if="crToggle">
-                <strong>This is some Hidden Stuff</strong>
+                <strong>This is some Hidden Stuff Behind v-if vs v-show</strong>
               </h5>
               <hr />
               <div>

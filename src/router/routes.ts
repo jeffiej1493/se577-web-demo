@@ -19,6 +19,10 @@ const routes: RouteRecordRaw[] = [
         path: '/props',
         component: () => import('pages/AppPages/PropsPage.vue'),
       },
+      {
+        path: '/bc_demo',
+        component: () => import('pages/AppPages/BCPage.vue'),
+      },
     ],
   },
 
