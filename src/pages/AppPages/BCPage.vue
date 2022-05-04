@@ -4,55 +4,26 @@
       <h6>Block Chain Parent Page</h6>
     </q-banner>
     <div class="row">
-      <PropsChild class="col-4 q-pa-sm" title="HELLO"></PropsChild>
+      <div class="col-4">
+        <BCBasicComponent />
+      </div>
+      <div class="col-4">
+        <BCAdvancedComponent />
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import { ChildCardType } from 'src/models/AppTypes';
-
-import PropsChild from 'components/Props/PropsChild.vue';
-
-const childCardData: ChildCardType[] = [
-  {
-    name: 'First Card',
-    info: 'Card 1 Information',
-    link1: 'Link A1',
-    link2: 'Link A2',
-  },
-  {
-    name: 'Second Card',
-    info: 'Card 2 Information',
-    link1: 'Link B1',
-    link2: 'Link B2',
-  },
-  {
-    name: 'Third Card',
-    info: 'Card 3 Information',
-    link1: 'Link C1',
-    link2: 'Link C2',
-  },
-  {
-    name: 'Fourth Card',
-    info: 'Card 4 Information',
-    link1: 'Link D1',
-    link2: 'Link D2',
-  },
-  {
-    name: 'Fifth Card',
-    info: 'Card 5 Information',
-    link1: 'Link E1',
-    link2: 'Link E2',
-  },
-];
+import { defineComponent } from 'vue';
+import BCAdvancedComponent from 'src/components/BC/BCAdvanced.vue';
+import BCBasicComponent from 'src/components/BC/BCBasic.vue';
 
 export default defineComponent({
   name: 'BCPage',
-  components: { PropsChild },
+  components: { BCAdvancedComponent, BCBasicComponent },
   setup() {
-    return { childCardList: ref(childCardData) };
+    return {};
   },
 });
 </script>
