@@ -42,7 +42,8 @@
           <router-link to="/webservices">Web Services</router-link> |
           <router-link to="/simple_state">Simple State</router-link> |
           <router-link to="/web_state">Web State</router-link> |
-          <router-link to="/bc_demo">Block Chain Demo</router-link>
+          <router-link to="/bc_demo">Block Chain</router-link> |
+          <router-link to="/gh_demo">Github</router-link>
         </div>
         <router-view />
       </div>
