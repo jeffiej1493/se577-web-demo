@@ -58,6 +58,7 @@ let localTest = ref('local test');
 
 const onReset = () => {
   localTest.value = 'localTest';
+  repos.value = [];
 };
 
 const onSubmit = async () => {
