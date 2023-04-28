@@ -1,5 +1,10 @@
 import { RouteRecordRaw } from 'vue-router';
 
+const LoginPage = () => import('@/pages/AppPages/LoginPage.vue');
+const InfoPage = () => import('@/pages/AppPages/InfoPage.vue');
+const RepositoriesPage = () => import('@/pages/AppPages/RepositoriesPage.vue');
+const RepositoryDetailsPage = () => import('@/pages/AppPages/RepositoryDetailsPage.vue');
+
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
@@ -30,6 +35,22 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/gh_demo',
         component: () => import('pages/AppPages/GHPage.vue'),
+      },
+      {
+        path: '/login',
+        component: LoginPage,
+      },
+      {
+        path: '/info',
+        component: InfoPage,
+      },
+      {
+        path: '/repos',
+        component: RepositoriesPage,
+      },
+      {
+        path: '/repo-details',
+        component: RepositoryDetailsPage,
       },
     ],
   },
